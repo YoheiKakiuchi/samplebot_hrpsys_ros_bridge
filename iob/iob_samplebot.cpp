@@ -3,7 +3,7 @@
 #include <cstdlib>
 #include <cstring>
 #include <vector>
-#include "iob.h"
+#include "io/iob.h"
 
 static std::vector<double> command;
 static std::vector<std::vector<double> > forces;

@@ -22,6 +22,16 @@ if(NOT CMAKE_BUILD_TYPE)
     FORCE)
 endif()
 
+if(NOT EXISTS ${PROJECT_SOURCE_DIR}/launch)
+  file(MAKE_DIRECTORY ${PROJECT_SOURCE_DIR}/launch)
+endif()
+if(NOT EXISTS ${PROJECT_SOURCE_DIR}/scripts)
+  file(MAKE_DIRECTORY ${PROJECT_SOURCE_DIR}/scripts)
+endif()
+if(NOT EXISTS ${PROJECT_SOURCE_DIR}/euslisp)
+  file(MAKE_DIRECTORY ${PROJECT_SOURCE_DIR}/euslisp)
+endif()
+
 ## Build for iob
 find_package(PkgConfig)
 pkg_check_modules(omniorb omniORB4 REQUIRED)
@@ -60,3 +70,6 @@ generate_default_launch_eusinterface_files (
   SAMPLEBOT
   "--use-unstable-hrpsys-config"
   )
+
+## 
+## install build/xx-interface.l -> euslisp

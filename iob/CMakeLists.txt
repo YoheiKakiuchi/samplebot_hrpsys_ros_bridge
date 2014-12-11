@@ -6,7 +6,7 @@ target_link_libraries(hrpIo_samplebot rt)
 
 # RobotHardware
 set(comp_source ${ROBOTHARDWARE_SOURCE}/robot.cpp ${ROBOTHARDWARE_SOURCE}/RobotHardware.cpp ${ROBOTHARDWARE_SOURCE}/RobotHardwareService_impl.cpp)
-set(libs hrpIo_shm hrpModel-3.1 hrpCollision-3.1 hrpUtil-3.1 hrpsysBaseStub)
+set(libs hrpIo_samplebot hrpModel-3.1 hrpCollision-3.1 hrpUtil-3.1 hrpsysBaseStub)
 
 add_library(RobotHardware_samplebot SHARED ${comp_source})
 
